@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Mosaquiel Materiais de Construção | Novo Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <nav class="menu-principal">
+                <table class="tabela-menu" width="100%">
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>
+                                    <a class="ignore-sublime" style="text-decoration: none" href='./sobre/index.html'>Sobre</a>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Produtos ▾</button>
+                                        <div class="dropdown-content">
+                                            <a href="../../novocardapio.html#page6">Sacarias</a>
+                                            <a href="../../novocardapio.html#page3">Tijolos</a>
+                                            <a href="../../novocardapio.html#page2">Telhas</a>
+                                            <a href="../../novocardapio.html#page1">Pisos e Revestimentos</a>
+                                            <a href="../../novocardapio.html#page5">Tintas</a>
+                                            <a href="../../novocardapio.html#page4">Materiais Hidráulicos</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="ignore-sublime">Promoções</a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td style="text-align: center;">
+                            <img class="logo" src="../images/logo.jpg" width="250px" alt="logo">
+                        </td>
+                        <td>
+                            <ul>
+                                <li class="compras">
+                                    <a href='../components/carrinho/index.html' style="text-decoration: none;" target="_blank">
+                                        <img class="carrinho" src="../carrinho.png" width="30px">Meu Pedido</a>
+                            </ul>
+                            </li>
+                        </td>
+                    </tr>
+                </table>
+            </nav>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            <!--Menu Flutuante-->
+            <div class="fab">
+                <button class="main"></button>
+                <ul>
+                    <li>
+                        <button id="opcao1">       
+                        <a href='https://www.instagram.com/mosaquielmateriais/' target="_blank"> 
+                            <img src="../images/contato/Instagram.png" style="vertical-align: middle;" width="45px">
+                        </a>
+                    </button>
+                    </li>
+                    <script>
+                        document.querySelector('.fab .main').addEventListener('click', function() {
+                            document.querySelector('.fab').classList.toggle('show');
+                        });
+
+                        document.querySelectorAll('.fab ul li button').forEach((item) => {
+                            item.addEventListener('click', function() {
+                                document.querySelector('.fab').classList.remove('show');
+                            });
+                        });
+                    </script>
+            </div>
+
+            <!-- FORMULARIO CADASTRO-->
+            <main>
+                <h1>Crie sua conta</h1> <br>
+                <div class="alternativa">
+                    <span>OU</span>
+                    <br>
+                    <span>UTILIZE AS REDES SOCIAIS:</span>
+                </div>
+
+                <div class="social-media">
+                    <a href="#">
+                        <img src="../images/174855.png" alt="Instagram">
+                    </a>
+                    <a href="#">
+                        <img src="../images/124010.png" alt="Facebook">
+                    </a>
+                </div>
+
+                <form id="registerForm">
+                    <label for="nome">
+                    <span>Nome de usuário</span>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                </label>
+
+                    <label for="email">
+                    <span>E-mail</span>
+                    <input type="email" id="email" name="email" placeholder="Ex: exemplo@email.com" required> 
+                </label>
+
+                    <label for="telefone">
+                    <span>Telefone</span>
+                    <input type="text" id="telefone" name="telefone" placeholder="Ex: (31) 91234-5678" required>
+                </label>
+
+                    <label for="cep">
+                    <span>CEP</span>
+                    <input type="text" id="cep" name="cep" placeholder="Ex: 12345-678" required>
+                </label>
+
+                    <label for="rua">
+                    <span>Rua</span>
+                    <input type="text" id="rua" name="rua" placeholder="Ex: Rua das Flores" required>
+                </label>
+
+                    <label for="numero">
+                    <span>Nº</span>
+                    <input type="text" id="numero" name="numero" placeholder="Ex: 123" required>
+                </label>
+
+                    <label for="complemento">
+                    <span>Complemento</span>
+                    <input type="text" id="complemento" name="complemento" placeholder="Ex: Apto 101">
+                </label>
+
+                    <label for="cidade">
+                    <span>Cidade</span>
+                    <input type="text" id="cidade" name="cidade" placeholder="Ex: Belo Horizonte" required>
+                </label>
+
+                    <label for="estado">
+                    <span>Estado</span>
+                    <input type="text" id="estado" name="estado" placeholder="Ex: MG" required>
+                </label>
+
+                    <label for="senha">
+                    <span>Senha</span>
+                    <input type="password" id="senha" name="senha" placeholder="Escolha uma senha segura" required>
+                </label>
+
+                    <label for="confsenha">
+                    <span>Confirme sua Senha</span>
+                    <input type="password" id="confsenha" name="confsenha" placeholder="Confirme sua senha" required>
+                </label>
+
+                    <input type="submit" value="Confirmar">
+                </form>
+            </main>
+
+            <section class="images">
+                <img src="../boneco.jpg" id="copoOreo" alt="Logo Boneco">
+            </section>
+        </div>
+        <!-- Fim da div main-content -->
+
+        <!-- Validação e Redirecionamento -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const telefone = document.getElementById('telefone');
+                const cep = document.getElementById('cep');
+                const numero = document.getElementById('numero');
+                const senha = document.getElementById('senha');
+                const confsenha = document.getElementById('confsenha');
+                const formulario = document.getElementById('registerForm');
+
+                // Função para permitir apenas números em campos específicos
+                function permitirApenasNumeros(input, maxLength) {
+                    input.addEventListener('input', function() {
+                        this.value = this.value.replace(/[^0-9]/g, '').slice(0, maxLength);
+                    });
+                }
+
+                permitirApenasNumeros(telefone, 11);
+                permitirApenasNumeros(cep, 8);
+                permitirApenasNumeros(numero, 10);
+
+                formulario.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const password = senha.value;
+                    const confirmPassword = confsenha.value;
+
+                    if (password !== confirmPassword) {
+                        alert("As senhas não coincidem. Por favor, tente novamente.");
+                        return;
+                    }
+
+                    alert("Cadastro realizado com sucesso!");
+                    window.location.href = "../index.html";
+                });
+            });
+        </script>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <footer>
+                <div class="align-item: itens">
+                    <p> Contatos: </p>
+                    <div style="align-items: flex-end; display: flex; justify-content: center; padding-top: 10px;">
+                        <a href='https://www.instagram.com/mosaquielmateriais/' target="_blank"><img class="logo-icon" src="../images/174855.png" alt="Instagram"></a>
+                        <a href='https://www.instagram.com/mosaquielmateriais/' target="_blank"><img class="logo-icon" src="../images/124010.png" alt="Facebook"></a>
+                        <a href='https://www.instagram.com/mosaquielmateriais/' target="_blank"><img class="logo-icon" src="../images/989997.png" alt="WhatsApp"></a>
+                    </div>
+                </div>
+                <div class="corpyright-footer" style="padding-top: 10px;">
+                    2024 © Mosaquiel | Materiais de Construção
+                </div>
+            </footer>
+        </div>
+</body>
+
+</html>

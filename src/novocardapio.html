@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="sortcut icon" href="./images/logo.jpg" type="image/x-icon" />
+    <title>Mosaquiel | Materiais de Construção</title>
+    <link rel="stylesheet" href="novo-style-cardapio.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <nav class="menu-principal">
+                <table class="tabela-menu" width=100%>
+                    <tr>
+                        <td>
+                            <div id="menu-mobile">
+                                <nav role="navigation">
+                                    <div id="menuToggle">
+                                        <input type="checkbox" />
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <ul id="menu">
+                                            <a href='./components/sobre/index.html'>
+                                                <li>Sobre</li>
+                                            </a><br>
+                                            <div class="dropdown" id="nav">
+                                                <button class="dropbtn" style="padding: 0;"><li>Produtos ▾</li></button>
+                                                <div class="dropdown-content">
+                                                    <a href="#page1">Sacarias</a>
+                                                    <a href="#page2">Tijolos</a>
+                                                    <a href="#page3">Telhas</a>
+                                                    <a href="#page4">Pisos e Revestimentos</a>
+                                                    <a href="#page5">Tintas</a>
+                                                    <a href="#page6">Materiais Hidráulicos</a>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <a href='./components/promocoes/index.html'>
+                                                <li>Promoções</li>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div id="menu-desktop">
+                                <ul>
+                                    <li class="menu-desktop">
+                                        <a style="text-decoration: none;" href='./components/sobre/index.html'>Sobre</a>
+                                    </li>
+
+                                    <li class="menu-desktop">
+                                        <div class="dropdown">
+                                            <button class="dropbtn">Produtos ▾</button>
+
+                                            <div class="dropdown-content">
+                                                <a href="#page1">Sacarias</a>
+                                                <a href="#page2">Tijoloss</a>
+                                                <a href="#page3">Telhas</a>
+                                                <a href="#page4">Pisos e Revestimentos</a>
+                                                <a href="#page5">Tintas</a>
+                                                <a href="#page6">Materiais Hidráulicos</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="menu-desktop">
+                                        <a href='./components/promocoes/index.html'>Promoções</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </td>
+                        <td style="text-align: center;">
+                            <a href="./index.html">
+                                <img class="logo" src="logo.jpg" width="250px" alt="logo">
+                            </a>
+                        </td>
+                        <td>
+                            <ul>
+                                <li class="compras">
+                                    <a href='./components/carrinho/index.html' style="text-decoration: none; color:#497358;" target="_blank">
+                                        <img class="carrinho" src="carrinho.png"><span>Meu Pedido</span></a>
+                            </ul>
+                            </li>
+
+                        </td>
+                    </tr>
+                </table>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Títulos -->
+        <div class="sacarias" style="padding-top: 100px; margin-top: -87px;" id="page1">
+            <img class="icone" src="images/iconescardapio/sacarias.png" width="70px" alt="Sacarias">
+            <p>Sacarias</p>
+        </div>
+        <div class="tijolos" style="padding-top: 100px; margin-top: -87px;" id="page2">
+            <img class="icone" src="images/iconescardapio/tijolos.png" width="60px" alt="Tijolos">
+            <p>Tijolos</p>
+        </div>
+        <div class="telhas" style="padding-top: 100px; margin-top: -87px;" id="page3">
+            <img class="icone" src="images/iconescardapio/telhas.png" width="60px" alt="Telhas">
+            <p>Telhas</p>
+        </div>
+        <div class="pisos-revestimentos" style="padding-top: 100px; margin-top: -87px;" id="page4">
+            <img class="icone" src="images/iconescardapio/pisos_e_revestimentos.png" width="60px" alt="Pisos e Revestimentos">
+            <p>Pisos e Revestimentos</p>
+        </div>
+        <div class="tintas" style="padding-top: 100px; margin-top: -87px;" id="page5">
+            <img class="icone" src="images/iconescardapio/tintas.png" width="60px" alt="Tintas">
+            <p>Tintas</p>
+        </div>
+        <div class="materiais-hidraulicos" style="padding-top: 100px; margin-top: -87px;" id="page6">
+            <img class="icone" src="images/iconescardapio/materiais_hidráulicos.png" width="60px" alt="Materiais Hidráulicos">
+            <p>Materiais Hidráulicos</p>
+        </div>
+
+
+        <!--Produtos-->
+        <div class="produto1">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/areia_7ec4_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Areias</p>
+                        <p class="descricao">Areia Média Lavada Saco 20kg Grupo Tomino</p>
+                        <p class="valor">R$4,19</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a id='mini-add' onclick="addToCart({id: 102, nome:'Areia Fina Lavada Saco 20kg Grupo Tomino', vlr: '5.09', qnt: '1', type: 'Areia Fina Lavada' })" href="#">Areia Fina Lavada Saco 20kg Grupo Tomino</a>
+                                <a id='mini-add' onclick="addToCart({id: 103, nome:'Areia Grossa Lavada Saco 20kg Grupo Tomino', vlr: '4.99', qnt: '1', type: 'Areia Grossa Lavada Grupo Tomino' })" href="#">Areia Grossa Lavada Saco 20kg Grupo Tomino</a>
+                                <a id='mini-add' onclick="addToCart({id: 104, nome:'Areia Grossa Lavada Saco De 20Kg', vlr: '5.39', qnt: '1', type: 'Areia Grossa Lavada' })" href="#">Areia Grossa Lavada Saco De 20Kg</a>
+                                <a id='mini-add' onclick="addToCart({id: 105, nome:'Areia Média Lavada Saco De 20Kg', vlr: '4.59 ', qnt: '1', type: 'Areia Média Lavada' })" href="#">Areia Média Lavada Saco De 20Kg</a>
+                                <a id='mini-add' onclick="addToCart({id: 106, nome:'Areia Fina Lavada Saco De 20Kg', vlr: '4.59', qnt: '1', type: 'Areia Fina Lavada' })" href="#">Areia Fina Lavada Saco De 20Kg</a>
+                                <a id='mini-add' onclick="addToCart({id: 107, nome:'Areia Grossa Lavada Saco De 20Kg', vlr: '5.39', qnt: '1', type: 'Areia Grossa Lavada' })" href="#">Areia Grossa Lavada</a>
+                                <a id='mini-add' onclick="addToCart({id: 108, nome:'Areia Fina M3', vlr: '6.50', qnt: '1', type: 'Areia Fina M3' })" href="#">Areia Fina M3</a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 2, nome:'Areia Média Lavada Saco 20kg Grupo Tomino', vlr: '4.19', qnt: '1', type: 'Areia Média' })">Adicionar
+              <img class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto2">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/argamassas_b39d_300x300.jpg" width="140px" height="180px">
+                    </td>
+
+                    <td>
+                        <p class="titulo">Argamassas</p>
+                        <p class="descricao">Argamassa Porcelanato Interno e Externo Cinza 20kg Axton</p>
+                        <p class="valor">R$25,85</p>
+                        <button id='adicionar' class="umaopcao" onclick="addToCart({id: 1, nome:'Argamassa Porcelanato Interno e Externo Cinza 20kg Axton', vlr: '6.00', qnt: '1', type: 'Argamassa Porcelanato' })">Adicionar
+              <img class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto3">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/argila_expandida_e_vermiculita_188c_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Argilas</p>
+                        <p class="descricao">Argila Expandida 5Kg Geolia</p>
+                        <p class="valor">R$17,99</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a id='mini-add' onclick="addToCart({id: 109, nome:'', vlr: '8.00', qnt: '1', type: '' })" href="#"></a>
+                                <a id='mini-add' onclick="addToCart({id: 110, nome:'', vlr: '8.00', qnt: '1', type: '' })" href="#"></a>
+                                <a id='mini-add' onclick="addToCart({id: 111, nome:'', vlr: '8.00', qnt: '1', type: '' })" href="#"></a>
+                                <a id='mini-add' onclick="addToCart({id: 112, nome:'', vlr: '8.00', qnt: '1', type: '' })" href="#"></a>
+                                <a id='mini-add' onclick="addToCart({id: 113, nome:'', vlr: '8.00', qnt: '1', type: '()' })" href="#">()</a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 3, nome:'Argila Expandida 5Kg Geolia', vlr: '8.00', qnt: '1', type: 'Sacarias' })">Adicionar
+              <img class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto4">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/cal_e04c_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Cal</p>
+                        <p class="descricao">Cal Hidratada para Construção Civil 20Kg Votoran</p>
+                        <p class="valor">R$16,87</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add' onclick="addToCart({id: 114, nome:'', vlr: '8.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 115, nome:'', vlr: '8.00', qnt: '1', type: '' })"></a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 4, nome:'Cal Hidratada para Construção Civil 20Kg Votoran', vlr: '8.00', qnt: '1', type: 'Sacarias' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto5">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/cimentos_4bed_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Cimentos</p>
+                        <p class="descricao">Cimento CP II F 32 Todas as Obras 50kg Votoran</p>
+                        <p class="valor">R$ 34,90</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add' onclick="addToCart({id: 116, nome:'', vlr: '7.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 117, nome:'', vlr: '7.00', qnt: '1', type: '' })"></a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 5, nome:'Cimento CP II F 32 Todas as Obras 50kg Votoran', vlr: '7.00', qnt: '1', type: 'Sacarias' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto6">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/gessos_82c7_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Gessos</p>
+                        <p class="descricao">Gesso em Pó Secagem Rápida 4Kg Fortaleza</p>
+                        <p class="valor">R$ 11,66</p>
+                        <button class="umaopcao" onclick="addToCart({id: 6, nome:'Gesso em Pó Secagem Rápida 4Kg Fortaleza', vlr: '8.00', qnt: '1', type: 'Sacarias' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto7">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/pedra_brita_22e2_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Brita</p>
+                        <p class="descricao">Pedra Britada 1 Saco 20kg Grupo Tomino</p>
+                        <p class="valor">R$ 4,29</p>
+                        <button class="umaopcao" onclick="addToCart({id: 7, nome:'Pedra Britada 1 Saco 20kg Grupo Tomino', vlr: '8.00', qnt: '1', type: 'Sacarias' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto8">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/sacarias/rejuntes_04a4_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Rejuntes</p>
+                        <p class="descricao">Rejuntes_04a4_300x300</p>
+                        <p class="valor">R$25,99</p>
+                        <button class="umaopcao" onclick="addToCart({id: 8, nome:'Rejuntes_04a4_300x300', vlr: '8.00', qnt: '1', type: 'Sacarias' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto9">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/tijolos/tijolos_comuns_8604_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Tijolo Comum</p>
+                        <p class="descricao">Tijolo Comum de Barro 4,3x9,1x18cm 10 Unidades Grupo Tomino</p>
+                        <p class="valor">R$8,49</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add' onclick="addToCart({id: 118, nome:'', vlr: '7.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 119, nome:'', vlr: '7.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 120, nome:'', vlr: '7.00', qnt: '1', type: '' })"></a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 9, nome:'Tijolo Comum de Barro 4,3x9,1x18cm 10 Unidades Grupo Tomino', vlr: '7.00', qnt: '1', type: 'Tijolos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto10">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/tijolos/tijolos_de_acabamento_d9c7_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Tijolos de acabamento</p>
+                        <p class="descricao">Tijolo Aparente Reto Vermelho 10,2cmx5,2cmx22,2cm Bauth</p>
+                        <p class="valor">R$1,76</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add' onclick="addToCart({id: 121, nome:'', vlr: '8.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 122, nome:'', vlr: '8.00', qnt: '1', type: '' })"></a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 10, nome:'Tijolo Aparente Reto Vermelho 10,2cmx5,2cmx22,2cm Bauth', vlr: '8.00', qnt: '1', type: 'Tijolos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto11">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/telhas/concreto_6c84_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Telhas Concreto/p>
+                            <p class="descricao">Telha de Concreto Coppo Veneto Cinza Brastelha</p>
+                            <p class="valor">R$4,00</p>
+                            <button class="umaopcao" onclick="addToCart({id: 11, nome:'Telha de Concreto Coppo Veneto Cinza Brastelha', vlr: '17.00', qnt: '1', type: 'Telhas' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto12">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/telhas/telha_de_pvc_plan_ceramica_3,30x0,88m_precon_89341602_0001_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Telha de PVC</p>
+                        <p class="descricao">Telha de PVC Plan Cerâmica 2,42m x 88cm 1,5mm - Precon</p>
+                        <p class="valor">R$179,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 12, nome:'Telha de PVC Plan Cerâmica 2,42m x 88cm 1,5mm - Precon', vlr: '17.00', qnt: '1', type: 'Telhas' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto13">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/telhas/telha_esmaltada_8296_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Telha Esmaltada</p>
+                        <p class="descricao">Telha Cerâmica Esmaltada 43x27cm Supernova Marfim 1 Face Perkus</p>
+                        <p class="valor">R$5,59</p>
+                        <button class="umaopcao" onclick="addToCart({id: 13, nome:'Telha Cerâmica Esmaltada 43x27cm Supernova Marfim 1 Face Perkus', vlr: '20.00', qnt: '1', type: 'Telhas' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto14">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/telhas/telha_polipropileno_2,44mx1,10m_ondulada_translucida_atco_88223905_0001_300x300.png" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Telha Polipropileno</p>
+                        <p class="descricao">Telha Polipropileno 3,05mx1,10m Ondulada Translúcida Atco</p>
+                        <p class="valor">R$155,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 14, nome:'Telha Polipropileno 3,05mx1,10m Ondulada Translúcida Atco', vlr: '18.00', qnt: '1', type: 'Telhas' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto15">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/ladrilhos_298c_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Ladrilhos</p>
+                        <p class="descricao">Ladrilhos Hidráulicos Hexagonal Azul</p>
+                        <p class="valor">R$14,99</p>
+                        <button class="umaopcao" onclick="addToCart({id: 15, nome:'Ladrilhos Hidráulicos Hexagonal Azul', vlr: '13.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto16">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/pisos_ceramicos_ba43_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Pisos Ceramicos</p>
+                        <p class="descricao">Porcelanato Interno Cimento Acetinado Borda Reta 61924 61,1x61,1cm Artens</p>
+                        <p class="valor">R$50,20</p>
+                        <button class="umaopcao" onclick="addToCart({id: 16, nome:'Porcelanato Interno Cimento Acetinado Borda Reta 61924 61,1x61,1cm Artens', vlr: '13.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto17">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/pisos_para_calcada_7e15_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Pisos para Calçada</p>
+                        <p class="descricao">Ladrilho para Calçada Copacabana 20x20cm Cimartex</p>
+                        <p class="valor">R$69,20</p>
+                        <button class="umaopcao" onclick="addToCart({id: 17, nome:'Ladrilho para Calçada Copacabana 20x20cm Cimartex', vlr: '14.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto18">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/piso_laminado_prime_cappuccino_136x19,7cm_m2_eucafloor_87744965_5699_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Pisos Laminados</p>
+                        <p class="descricao">Piso Laminado Click Nature 136x21,7cm m² Artens</p>
+                        <p class="valor">R$63,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 18, nome:'Piso Laminado Click Nature 136x21,7cm m² Artens', vlr: '13.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto19">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/piso_ceramico_esmaltado_deck_native_hd61437_60x60cm_artens_90729611_4996_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Pisos Ceramicos</p>
+                        <p class="descricao">Piso Laminado Click Nature 136x21,7cm m² Artens</p>
+                        <p class="valor">R$63,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 19, nome:'Piso Laminado Click Nature 136x21,7cm m² Artens', vlr: '13.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto20">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/pisos_vinilicos_e614_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Pisos Vinilicoss</p>
+                        <p class="descricao">Piso Vinílico Click Camden Pecan m² Artens</p>
+                        <p class="valor">R$164,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 20, nome:'Piso Vinílico Click Camden Pecan m² Artens', vlr: '12.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto21">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/pisos_intertravados_e_drenantes_c36f_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Pisos Intertravados e Drenantes</p>
+                        <p class="descricao">Piso Drenante Placa 20x20x6cm Natural Oterprem</p>
+                        <p class="valor">R$5,89</p>
+                        <button class="umaopcao" onclick="addToCart({id: 21, nome:'Piso Drenante Placa 20x20x6cm Natural Oterprem', vlr: '12.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto22">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/pisos_e_revestimentos/porcelanato_esmaltado_acetinado_reto_interno_87,7x87,7cm_m2_90427701_2bf2_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Porcelanato Esmaltado</p>
+                        <p class="descricao">Porcelanato Externo Cimento Esmaltado Borda Reta Chicago Sgr 87,7x87,7cm Portinari</p>
+                        <p class="valor">R$134,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 22, nome:'Porcelanato Externo Cimento Esmaltado Borda Reta Chicago Sgr 87,7x87,7cm Portinari', vlr: '15.00', qnt: '1', type: 'Pisos e Revestimentos' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto23">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/tintas/esmalte_base_agua_acetinado_preto_3,6l_luxens_89427751_0001_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Esmalte a Base de Água</p>
+                        <p class="descricao">Esmalte Base Água Acetinado Preto 900mL Luxens</p>
+                        <p class="valor">R$41,90</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add' onclick="addToCart({id: 123, nome:'', vlr: '3.50', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 124, nome:'', vlr: '3.50', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 125, nome:'', vlr: '3.50', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 126, nome:'', vlr: '3.50', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 127, nome:'', vlr: '3.50', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 128, nome:'', vlr: '3.50', qnt: '1', type: '' })"></a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 23, nome:'Esmalte Base Água Acetinado Preto 900mL Luxens', vlr: '3.50', qnt: '1', type: 'Tintas' })">Adicionar
+              <img class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto24">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/tintas/tinta_acrilica_fosca_para_piso_azul_profundo_18l_luxens_89915056_0001_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Tinta Acrilica Fosca para Piso Azul</p>
+                        <p class="descricao">Tinta Acrilica Fosca para Piso Azul Profundo 18L Luxens</p>
+                        <p class="valor">R$224,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 24, nome:'Tinta Acrilica Fosca para Piso Azul Profundo 18L Luxens', vlr: '4.00', qnt: '1', type: 'Tintas' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto25">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/tintas/tinta_acrilica_fosca_para_piso_verde_folha_3,6l_luxens_89915112_0001_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Tinta Acrilica Fosca para Piso Verde</p>
+                        <p class="descricao">Tinta Acrilica Fosca para Piso Verde Folha 3,6L Luxens</p>
+                        <p class="valor">R$79,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 25, nome:'Tinta Acrilica Fosca para Piso Verde Folha 3,6L Luxens', vlr: '4.00', qnt: '1', type: 'Tintas' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto26">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/tintas/tinta_acrilica_fosca_para_piso_preto_18l_luxens_89915063_0001_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Tinta Acrilica Fosca para Piso Preto</p>
+                        <p class="descricao">Tinta Acrilica Fosca para Piso Preto 3,6L Luxens</p>
+                        <p class="valor">R$79,90</p>
+                        <button class="umaopcao" onclick="addToCart({id: 26, nome:'Tinta Acrilica Fosca para Piso Preto 3,6L Luxens', vlr: '4.00', qnt: '1', type: 'Tintas' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto27">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/materiais_hidráulicos/canos_e_conexoes_hidraulicas_e4b8_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Canos e Conexões</p>
+                        <p class="descricao">Cano PVC para Esgoto 150mm ou 6" 3m Equation</p>
+                        <p class="valor">R$100,00</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtnsabores">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add' onclick="addToCart({id: 129, nome:'', vlr: '4.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 130, nome:'', vlr: '4.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 131, nome:'', vlr: '4.00', qnt: '1', type: '' })"></a>
+                                <a href="#" id='mini-add' onclick="addToCart({id: 132, nome:'', vlr: '4.00', qnt: '1', type: '' })"></a>
+                            </div>
+                        </div>
+                        <button class="comprar" onclick="addToCart({id: 27, nome:'Cano PVC para Esgoto 150mm ou 6 3m Equation ', vlr: '4.00 ', qnt: '1 ', type: 'Materiais Hidráulicos ' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto28">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/materiais_hidráulicos/acabamentos_para_registro_c491_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Acabamenos para registro</p>
+                        <p class="descricao">Acababamento para Registro Base Deca Parede Grande 1.1/4" 1.1/2" Jess Cromado Sensea</p>
+                        <p class="valor">R$72,90</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtnsabores">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 133, nome:' ', vlr: '2.00 ', qnt: '1 ', type: ' ' })"></a>
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 134, nome:' ', vlr: '2.00 ', qnt: '1 ', type: ' ' })"></a>
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 135, nome:' ', vlr: '2.00 ', qnt: '1 ', type: ' ' })"></a>
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 136, nome:' ', vlr: '2.00 ', qnt: '1 ', type: ' ' })"></a>
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 137, nome:' ', vlr: '2.00 ', qnt: '1 ', type: ' ' })"></a>
+                            </div>
+                        </div>
+                        <button class="comprar" onclick="addToCart({id: 28, nome:'Acababamento para Registro Base Deca Parede Grande 1.1/4 1.1/2 Jess Cromado Sensea ', vlr: '2.00 ', qnt: '1 ', type: 'Materiais Hidráulicos ' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto29">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/materiais_hidráulicos/acessorios_hidraulicos_c6de_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Acessorios Hidráulicos</p>
+                        <p class="descricao">Kit Instalação para Vaso Sanitário com Caixa Acoplada Equation</p>
+                        <p class="valor">R$39,90</p>
+                        <div class="dropdowntipos">
+                            <button class="dropbtntipos">Tipos ▾</button>
+                            <div class="dropdown-contenttipos">
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 138, nome:' ', vlr: '4.00 ', qnt: '1 ', type: ' ' })"></a>
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 139, nome:' ', vlr: '4.00 ', qnt: '1 ', type: ' ' })"></a>
+                                <a href="#" id='mini-add ' onclick="addToCart({id: 140, nome:' ', vlr: '4.00 ', qnt: '1 ', type: ' ' })"></a>
+                            </div>
+                        </div><button class="comprar" onclick="addToCart({id: 29, nome:'Kit Instalação para Vaso Sanitário com Caixa Acoplada Equation ', vlr: '4.00 ', qnt: '1 ', type: 'Materiais Hidráulicos ' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto30">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/materiais_hidráulicos/ralos_internos_06e1_300x300.jpeg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Ralos Internos</p>
+                        <p class="descricao">Ralo Quadrado Pequeno Aço Inox 10cm Equation</p>
+                        <p class="valor">R$29,50</p>
+                        <button class="umaopcao" onclick="addToCart({id: 30, nome:'Ralo Quadrado Pequeno Aço Inox 10cm Equation ', vlr: '3.00 ', qnt: '1 ', type: 'Materiais Hidráulicos ' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="produto31">
+            <table>
+                <tr>
+                    <td class="imagem-produto">
+                        <img src="images/imgprodutos/materiais_hidráulicos/ducha_higienica_cromado_2_funcoes_produto_importado_87849916_cc2c_300x300.jpg" width="140px" height="180px">
+                    </td>
+                    <td>
+                        <p class="titulo">Ducha Higiênicas</p>
+                        <p class="descricao">Ducha Higiênica 1,2m Branca e Cromada Sensea</p>
+                        <p class="valor">R$75,00</p>
+                        <button class="umaopcao" onclick="addToCart({id: 31, nome:'Ducha Higiênica 1,2m Branca e Cromada Sensea ', vlr: '2.00 ', qnt: '1 ', type: 'Materiais Hidráulicos ' })">Adicionar <img
+                class="carrinho-botao" src="carrinho2.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- menu flutuante-->
+        <div class="fab">
+            <button class="main">
+      </button>
+            <ul>
+                <li>
+                    <button id="opcao1">
+            <a href='https://www.instagram.com/mosaquielmateriais/ ' target="_blank">
+              <img src="images/contato/Instagram.png" style="vertical-align: middle;" width="45px">
+            </a>
+          </button>
+                </li>
+            </ul>
+        </div>
+
+
+        <script>
+            let type = ' '
+
+            function saveOption(option) {
+                console.log(option)
+                type = option;
+                console.log(type)
+            }
+
+
+            $(document).ready(function() {
+                toastr.options.timeOut = 1500; // 1.5s
+                toastr.progressBar = true;
+                toastr.preventDuplicates = true;
+            });
+
+
+
+            function toggleFAB(fab) {
+                if (document.querySelector(fab).classList.contains('show ')) {
+                    document.querySelector(fab).classList.remove('show ');
+                } else {
+                    document.querySelector(fab).classList.add('show ');
+                }
+            }
+
+            function addToCart(product) {
+                let cart = [];
+
+                localStorage.getItem("cart") != null ? cart = JSON.parse(localStorage.getItem("cart")) : [];
+                cart.find(e => e.id === product.id) != undefined ? cart.filter(e => e.id === product.id).map(e => e.qnt++) : cart.push(product);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                toastr.success(`Produto adicionado com sucesso ao carrinho !`);
+            }
+
+
+
+            document.querySelector('.fab .main ').addEventListener('click ', function() {
+                toggleFAB('.fab ');
+            });
+
+            document.querySelectorAll('.fab ul li button ').forEach((item) => {
+                item.addEventListener('click ', function() {
+                    toggleFAB('.fab ');
+                });
+            });
+        </script>
+
+
+        <div class="footer">
+            <footer>
+                <p>
+                    2024 © Mosaquiel | Materiais de Construção
+                </p>
+            </footer>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

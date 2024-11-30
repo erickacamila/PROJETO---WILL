@@ -4,54 +4,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra Realizada</title>
+    <title>Compra Realizada | Mosaquiel Materiais de Construção</title>
     <link rel="stylesheet" href="../../style.css">
     <style>
         body {
-            text-align: center;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #497358;
+            padding-left: 15px;
+            text-align: center;
+        }
+
+        .header img {
+            height: 70px;
         }
 
         .success-container {
-            margin-top: 50px;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
         }
 
-        h1 {
+        .success-text {
+            text-align: left;
+        }
+
+        .success-text h2 {
             color: #497358;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
-        p {
+        .success-text p {
             font-size: 18px;
+            margin: 10px 0;
+            color: #555;
         }
 
-        a {
-            display: inline-block;
+        .success-text .values {
             margin-top: 20px;
-            text-decoration: none;
-            background-color: #83fb38;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+        }
+
+        .success-text .values ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .success-text .values ul li {
             font-size: 16px;
+            color: #497358;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        img {
-            margin-top: 20px;
+        .success-text .values ul li i {
+            color: #83fb38;
+        }
+
+        .success-container img {
             width: 150px;
+            border-radius: 50%; /* Torna a imagem circular */
+            border: 2px solid #83fb38; /* Adiciona uma borda à imagem */
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #83fb38;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #71d230;
+        }
+
+        .contacts {
+            margin-top: 20px;
+        }
+
+        .contacts a {
+            text-decoration: none;
+            color: #497358;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #497358;
+            padding: 10px 0;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
+    <!-- Cabeçalho -->
+    <div class="header">
+        <!-- Logo Centralizada -->
+        <a href="/src/index.html">
+            <img src="/src/logo.jpg" alt="Logo Mosaquiel">
+        </a>
+    </div>
+
+    <!-- Conteúdo principal -->
     <div class="success-container">
-        <h1>Compra Realizada com Sucesso!</h1>
-        <p>Obrigado por escolher a <strong>Mosaquiel Materiais de Construção</strong>.</p>
-        <p>Em breve entraremos em contato para confirmar os detalhes.</p>
-        <img src="../../images/sucesso.png" alt="Sucesso">
-        <br>
-        <a href="../../index.html">Voltar à Página Inicial</a>
+        <!-- Imagem -->
+        <img src="src/boneco.jpg" alt="Compra Confirmada">
+
+        <!-- Texto de Sucesso -->
+        <div class="success-text">
+            <h2>Compra Realizada com Sucesso!</h2>
+            <p>Obrigado por escolher a <strong>Mosaquiel Materiais de Construção</strong>. Sua compra foi confirmada!</p>
+            <p>Em breve, entraremos em contato para confirmar os detalhes do seu pedido.</p>
+
+            <!-- Valores da empresa -->
+            <div class="values">
+                <h3>Por que escolher a Mosaquiel?</h3>
+                <ul>
+                    <li><i class="fa fa-check-circle"></i> Confiabilidade e Qualidade</li>
+                    <li><i class="fa fa-check-circle"></i> Melhor preço do mercado</li>
+                    <li><i class="fa fa-check-circle"></i> Entrega rápida e segura</li>
+                </ul>
+            </div>
+
+            <!-- Botões de ação -->
+            <a href="/src/index.html" class="btn">Voltar à Página Inicial</a>
+            <a href="/src/components/carrinho/index.html" class="btn">Ver Meus Pedidos</a>
+        </div>
+    </div>
+
+    <!-- Contatos adicionais -->
+    <div class="contacts" style="text-align: center; margin-top: 30px;">
+        <p>Precisa de ajuda? Entre em contato:</p>
+        <a href="https://www.instagram.com/mosaquielmateriais/" target="_blank">
+            <i class="fa fa-instagram"></i> Instagram
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5531998325314" target="_blank">
+            <i class="fa fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:contato@mosaquiel.com.br" target="_blank">
+            <i class="fa fa-envelope"></i> E-mail
+        </a>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>2024 © Mosaquiel | Materiais de Construção. Todos os direitos reservados.</p>
     </div>
 </body>
 

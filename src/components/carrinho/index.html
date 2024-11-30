@@ -282,7 +282,7 @@
                             <p></p>
                             <div class="modal-footer">
                                 <div class="w3-container w3-center">
-                                    <button onclick="gotowhatsapp()" type="submit" name="submit" value="Submit" class="btn1">Enviar pedido</button>
+                                    <button onclick="finalizarPedido()" type="submit" name="submit" value="Submit" class="btn1">Enviar pedido</button>
                                     <button onclick="document.getElementById('id01').style.display='none'" class="btn1">Continuar Comprando</button>
                                 </div>
                             </div>
@@ -307,9 +307,8 @@
                     toastr.progressBar = true;
                     toastr.preventDuplicates = true;
                 });
-
-
-                function gotowhatsapp() {
+            
+                function finalizarPedido() {
                     var name = document.getElementById("name").value;
                     var phone = document.getElementById("phone").value;
                     var entrega = document.getElementById("entrega").value;
@@ -323,26 +322,29 @@
                     var pagamento = document.getElementById("pagamento").value;
                     var troco = document.getElementById("troco").value;
                     var mensagem = document.getElementById("mensagem").value;
-                    var infoPedido = getPedido()
-
-                    var url = "https://www.instagram.com/direct/t/340282366841710300949128113147057165707" +
-                        "Name: " + name + "%0a" +
-                        "Phone: " + phone + "%0a" +
-                        "Entrega: " + entrega + "%0a" +
-                        "Cep: " + cep + "%0a" +
-                        "Logradouro: " + logradouro + "%0a" +
-                        "Bairro: " + bairro + "%0a" +
-                        "Localidade: " + localidade + "%0a" +
-                        "UF: " + uf + "%0a" +
-                        "Taxaentrega: " + taxaentrega + "%0a" +
-                        "Pagamento: " + pagamento + "%0a" +
-                        "troco: " + troco + "%0a" +
-                        "tMsg: " + mensagem + "%0a" +
-                        "Info do Pedido: " + infoPedido + "%0a"
-                    window.open(url, '_blank').focus();
+                    var infoPedido = getPedido(); // Obtém o pedido do carrinho
+            
+                    // Adiciona validações simples
+                    if (!name || !phone || !entrega || !pagamento) {
+                        alert("Por favor, preencha todos os campos obrigatórios.");
+                        return;
+                    }
+            
+                    // Redireciona para a página de confirmação
+                    window.location.href = "../../compra-realizada.html";
+                }
+            
+                function getPedido() {
+                    // Exemplo simples para obter informações de um pedido
+                    var carrinho = JSON.parse(localStorage.getItem("cart")) || [];
+                    if (carrinho.length === 0) return "Nenhum item no carrinho.";
+                    var listaProdutos = carrinho.map(function(item) {
+                        return `${item.qnt}x ${item.nome} - R$${item.vlr}`;
+                    });
+                    return listaProdutos.join(", ");
                 }
             </script>
-
+            
 
             <!--botão Flutuante-->
             <div class="fab">

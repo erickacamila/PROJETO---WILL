@@ -222,6 +222,16 @@
         </div>
     </div>
 
+    <script> let counter = 1;
+        setInterval(() => {
+            document.getElementById('radio' + counter).checked = true; // Seleciona o rádio correspondente
+            counter++;
+            if (counter > 4) { // Supondo que você tenha 4 imagens
+                counter = 1;   // Volta para a primeira imagem
+            }
+        }, 3000); // Altern<a a cada 5 segundos
+</script>
+
 
     <script>
         document.querySelector('.fab .main').addEventListener('click', function() {

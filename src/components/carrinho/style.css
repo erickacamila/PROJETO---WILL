@@ -431,8 +431,39 @@ body {
 }
 
 .botoes {
-    width: 20%;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza os itens */
 }
+
+.botoes a, 
+.botoes div {
+    padding: 8px 12px;
+    background-color: #a08686;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 80%; /* Ajusta a largura */
+    margin: 0 auto; /* Centraliza */
+    text-align: center;
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.botoes a:hover, 
+.botoes div:hover {
+    background-color: #946362;
+}
+
+
+.produto {
+    text-align: left;
+    width: 35%;
+    padding-right: 15px; /* Espaçamento extra entre o nome do produto e os valores */
+}
+
 
 .tipos {
     width: 15%;

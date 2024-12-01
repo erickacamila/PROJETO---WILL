@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra Realizada | Mosaquiel Materiais de Construção</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* Estilo Geral */
         body {
@@ -14,12 +14,15 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Cabeçalho */
         .header {
             background-color: #497358;
-            height: 80px; /* Ajustado para o padrão */
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -27,7 +30,6 @@
 
         .header img {
             height: 60px;
-            max-height: 100%;
             max-width: 100%;
         }
 
@@ -114,18 +116,59 @@
             margin: 0 10px;
         }
 
+        .contacts i {
+            margin-right: 5px;
+        }
+
         /* Rodapé */
         .footer {
             text-align: center;
             background-color: #497358;
             padding: 10px 0;
             color: #fff;
-            margin-top: 30px;
+            margin-top: auto;
         }
 
         .footer p {
             margin: 0;
             font-size: 14px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .success-container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            .success-container h2 {
+                font-size: 24px;
+            }
+
+            .success-container p {
+                font-size: 16px;
+            }
+
+            .success-details {
+                flex-direction: column;
+            }
+
+            .success-details img {
+                width: 100px;
+            }
+
+            .details-text h3 {
+                font-size: 20px;
+            }
+
+            .details-text p {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
@@ -147,7 +190,6 @@
             <div class="details-text">
                 <h3>Detalhes do Pedido</h3>
                 <p>📍 Entrega em até 3 dias úteis</p>
-                <p>🛒 Total: <span id="total-pedido-value">R$ 0.00</span></p>
             </div>
         </div>
 

@@ -4,7 +4,6 @@
     min-height: 100%;
 }
 
-
 /* CABEÇALHO */
 
 .header {
@@ -410,64 +409,34 @@ body {
 }
 
 .codigo {
-    width: 5%;
-    text-align: center;
+    width: 2%; /* Mantém o tamanho pequeno para códigos */
 }
 
 .produto {
-    width: 30%;
+    width: 30%; /* Ajustado para dar mais espaço ao produto */
+
 }
 
 .valor {
-    width: 15%;
+    width: 15%; /* Mantém o espaço para o valor */
 }
 
 .quantidade {
-    width: 15%;
+    width: 10%; /* Reduzido um pouco para equilibrar */
 }
 
 .valortotal {
-    width: 15%;
+    width: 15%; /* Mantém espaço para o total */
 }
 
 .botoes {
-    display: flex;
-    flex-direction: column; /* Alinha os itens verticalmente */
-    gap: 10px; /* Espaçamento entre os itens */
-    text-align: center; /* Centraliza os itens */
+    width: 20%; /* Mantém espaço suficiente para os botões */
 }
-
-.botoes a, 
-.botoes div {
-    padding: 8px 12px;
-    background-color: #a08686;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    width: 80%; /* Ajusta a largura */
-    margin: 0 auto; /* Centraliza */
-    text-align: center;
-    text-decoration: none; /* Remove sublinhado dos links */
-}
-
-.botoes a:hover, 
-.botoes div:hover {
-    background-color: #946362;
-}
-
-
-.produto {
-    text-align: left;
-    width: 35%;
-    padding-right: 15px; /* Espaçamento extra entre o nome do produto e os valores */
-}
-
 
 .tipos {
-    width: 15%;
+    width: 10%; /* Reduzido para não ultrapassar */
 }
+
 
 main {
     background-color: #E9F2F0;
